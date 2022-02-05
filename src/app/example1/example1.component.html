@@ -1,0 +1,72 @@
+<div>
+    <h3>Interpolation Example</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td>{{name.toUpperCase()}}</td>
+            <td>{{age}}</td>
+            <td>{{phone}}</td>
+            <td>{{address}}</td>
+        </tr>
+
+
+    </table>
+</div>
+<div>
+    <h3>Property Binding Example</h3>
+    <img alt="item" [src]="itemImageUrl" [height]="imageHeight" [width]="imageWidth">
+    <br>
+    <a [href]="myPage">My personal website</a>
+    <br>
+    <p>can't type here</p>
+    <input [disabled]="isDabled" type="text">
+</div>
+<div>
+    <h3>Event Binding</h3>
+    <button (click)="greeting()">Click</button>
+    {{greetMessage}}
+
+
+    <button (click)="namastey()">Click</button>
+    {{greetMessage}}
+
+    <button (click)="salam()">Click</button>
+    {{greetMessage}}
+</div>
+
+<div>
+    <h3>Two way binding</h3>
+    <input [(ngModel)]="name" type="text">
+    {{name}}
+
+
+    <H3> Two way data binding table example</H3>
+    <label>Name:</label>
+    <input [(ngModel)]="name" type="text">
+    {{name}}
+    <br>
+
+    <label>Age: </label>
+    <input [(ngModel)]="age" type="text">
+    {{age}}
+    <br>
+
+    <label>Phone: </label>
+    <input [(ngModel)]="phone" type="text">
+    {{phone}}
+    <br>
+
+    <label>Address: </label>
+    <input [(ngModel)]="address" type="text">
+    {{address}}
+    
+
+
+
+
+</div>
