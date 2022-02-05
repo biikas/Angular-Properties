@@ -45,14 +45,21 @@ import { Component, OnInit } from '@angular/core';
 
 //     `,
 
+// template: `
+//     <h1>Hello {{name}}
+//     <p>
+//       <input #myInput type="text">
+//       <button (click)="logMessage(myInput)">LOG</button>
+//       <input #myInput type="text">
+//       <button (click)="logMessage(myInput.value)">LOG</button>
+//     </p>
+
+//   `,
 template: `
-    <h1>Hello {{name}}
-    <p>
-      <input #myInput type="text">
-      <button (click)="logMessage(myInput)">LOG</button>
-      <input #myInput type="text">
-      <button (click)="logMessage(myInput.value)">LOG</button>
-    </p>
+    <h1>Hello {{name}}</h1>
+    <!-- <input [(ngModel)]="message" type="text"> -->
+    <input [(ngModel)]="name" type="text">
+    {{name}}
 
   `,
   styles: [],
@@ -67,7 +74,7 @@ export class TestComponent implements OnInit {
   public age = 12;
   public siteUrl = window.location.href;
   public isDabled = false;
-
+  public message="";
   public myId = "testid";
 
   //class binding
